@@ -9,12 +9,14 @@ const Blog = () => {
   const getBlog = async () => {
     try {
       const res = await fetch(
-        `http://localhost:4000/api/posts/getall?_limit=6&_page=${page}`,{
-          method:"GET",
-          headers:{
-            "Authorization":`Bearer ${token}`
-          }
-        });
+        `https://medium-66zd.vercel.app/api/posts/getall?_limit=6&_page=${page}`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       const data = await res.json();
       console.log(data)
       setBlogs([...blogs, ...data]);
