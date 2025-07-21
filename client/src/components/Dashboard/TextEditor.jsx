@@ -36,7 +36,7 @@ const TextEditor = () => {
       formData.append("content_pic", postData.content_pic);
       console.log(`Inside`);
       console.log(formData);
-      const res = await fetch("http://localhost:4000/api/posts/add", {
+      const res = await fetch("https://medium-66zd.vercel.app/api/posts/add", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

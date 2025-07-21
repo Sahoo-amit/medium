@@ -17,13 +17,16 @@ const Auth = ({ mode, setMode, onClose }) => {
     e.preventDefault();
     const curr_mode = mode === "signin" ? "login" : "register";
     try {
-      const res = await fetch(`http://localhost:4000/api/auth/${curr_mode}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      });
+      const res = await fetch(
+        `https://medium-66zd.vercel.app/api/auth/${curr_mode}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(user),
+        }
+      );
 
       const data = await res.json();
 

@@ -29,7 +29,7 @@ const Blog = () => {
     console.log('Pre-clap')
     try {
       const res = await fetch(
-        `http://localhost:4000/api/posts/clap/${postId}`,
+        `https://medium-66zd.vercel.app/api/posts/clap/${postId}`,
         {
           method: "POST",
           headers: {
