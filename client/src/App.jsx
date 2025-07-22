@@ -4,6 +4,7 @@ import { AuthStore } from "./Store/authStore";
 import Dashboard from "./pages/Dashboard";
 import Logout from "./components/Dashboard/Logout";
 import TextEditor from "./components/Dashboard/TextEditor";
+import NotFoundPage from "./pages/404page";
 
 const App = () => {
   const isAuthenticated = AuthStore((state)=>state.isAuthenticated)
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={isAuthenticated ? <Dashboard /> : <Home />} />
           <Route path="/logout" element={<Logout />} />
           <Route path='/write' element={<TextEditor />}/>
+          <Route path="*" element={<NotFoundPage/>} />
         </Routes>
       </BrowserRouter>
     </>
