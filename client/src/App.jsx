@@ -15,7 +15,7 @@ const App = () => {
           <Route path="/" element={isAuthenticated ? <Dashboard /> : <Home />} />
           <Route path="/logout" element={<Logout />} />
           <Route path='/write' element={<TextEditor />}/>
-          <Route path="*" element={<NotFoundPage/>} />
+          <Route path="/*" element={<NotFoundPage/>} />
         </Routes>
       </BrowserRouter>
     </>
